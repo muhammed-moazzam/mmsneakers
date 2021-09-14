@@ -15,9 +15,9 @@ import cProfile
 driver = webdriver.Chrome('../../../../Webdriver/bin/chromedriver')
 
 categories = {
-             "mens" : "https://www.footlocker.ca/en/category/mens/shoes.html"
-             # "womens" : "https://www.footlocker.ca/en/category/womens/shoes.html",
-             # "kids" : "https://www.footlocker.ca/en/category/kids/shoes.html"
+            "mens" : "https://www.footlocker.ca/en/category/mens/shoes.html",
+            "womens" : "https://www.footlocker.ca/en/category/womens/shoes.html",
+            "kids" : "https://www.footlocker.ca/en/category/kids/shoes.html"
 }
 
 shoe_list = []
@@ -106,5 +106,4 @@ def main():
         print("Scraping " + category + "...")
         scrape_category(category)
 
-
-cProfile.run('main()')
+main()
