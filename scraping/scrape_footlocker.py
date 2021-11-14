@@ -4,6 +4,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
+from webdriver_manager.chrome import ChromeDriverManager
 
 from bs4 import BeautifulSoup
 from time import sleep
@@ -12,7 +13,7 @@ import json
 
 import cProfile
 
-driver = webdriver.Chrome('../../../../Webdriver/bin/chromedriver')
+driver = webdriver.Chrome(ChromeDriverManager().install())
 
 categories = {
             "mens" : "https://www.footlocker.ca/en/category/mens/shoes.html",
